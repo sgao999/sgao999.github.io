@@ -25,7 +25,13 @@
     .conference li {
         counter-increment: cCounter;
     }
-    .journal li::before {
+    .journal1 li::before {
+        content: "[J" counter(jCounter) "] ";
+    }
+    .journal2 li::before {
+        content: "[J" counter(jCounter) "] ";
+    }
+    .journal3 li::before {
         content: "[J" counter(jCounter) "] ";
     }
     .conference li::before {
