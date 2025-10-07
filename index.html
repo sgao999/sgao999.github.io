@@ -31,7 +31,7 @@
         list-style-type: none;
         counter-reset: jCounter cCounter zCounter pCounter;
     }
- .journal li, .conference1 li, .conference2 li, .conference3 li, .z1 li, .z2 li, .pt li{
+ .journal li, .conference li, .zl li{
         list-style-type: none; /* 移除列表项默认的符号 */
         text-indent: -4ch;
         margin-top: 1.5em;
@@ -45,8 +45,8 @@
     .journal li::before {
         content: "[J" counter(jCounter) "] ";
     }
-    .conference li::before {
-        content: "[C" counter(cCounter) "] ";
+    .conference li {
+        counter-increment: cCounter;
     }
     .conference li::before {
         content: "[C" counter(cCounter) "] ";
@@ -54,7 +54,7 @@
     .zl li {
         counter-increment: zCounter;
     }
-   .z1 li::before {
+    .zl li::before {
         content: "[P" counter(zCounter) "] ";
     }
   
@@ -65,23 +65,23 @@
   <div class="container">
   
     <!-- personal info -->
-  <div class="row mb-4">
-    <div class="col-md-4">
-      <img src="assets/prof_pic.jpg" style="width:50%" class="rounded">
+    <div class="row mb-4 align-items-center g-0">
+        <div class="col-md-4">
+        <img src="assets/sg.png" style="width:50%;" class="rounded">
+      </div>
+      <div class="col-md-8"  style="font-family: Calibri, 'STZhongsong', 'STSong', 'SimSun', '华文中宋', Songti, serif; font-size: 1.15rem;">
+      <h2 class="text-3xl font-bold mb-1">Sheng Gao, 高 胜</h2>
+      <p class="text-gray-400 mb-2">Professor, Ph.D. Supervisor</p>
+      <p class="text-gray-400 mb-2"><a href="https://ie.cufe.edu.cn/">School of Information</a></p>
+      <p class="text-gray-400 mb-2"><a href="https://www.cufe.edu.cn/">Central University of Finance and Economics</a></p>
+      <p class="text-gray-400 mb-2">No.1 Shunsha Road, Shahe Section, Changping District, Beijing</p> 
+      <p class="text-gray-400 mb-2"><a>Office: #7-219</a></p>
+      <p class="text-gray-400 mb-2">Email:  sgao555 [AT] 163.com</a></p>
+      </div>
     </div>
-    <div class="col-md-8 ms-6">
-      <h2>Sheng Gao, 高胜</h2>
-      Professor, Ph.D. Supervisor<br>
-      <a href="https://ie.cufe.edu.cn/">School of Information</a><br>
-      <a href="https://www.cufe.edu.cn/">Central University of Finance and Economics</a><br>
-      No.1 Shunsha Road, Shahe Section, Changping District, Beijing 
-      <br><br>
-      <a>Office: #7-219</a><br>
-      Email:  sgao555 AT 163.com
-    </div>
-  </div>
   <hr>
-    <!-- tags -->
+
+  <!-- tags -->
     <ul class="nav nav-tabs mb-4" role="tablist">
       <li class="nav-item" role="presentation">
         <a class="nav-link active" data-bs-toggle="tab" href="#bio" role="tab">Biography</a>
@@ -104,7 +104,7 @@
     </ul>
 
     <!-- Tab Content -->
-    <div class="tab-content" style="font-family: Calibri, sans-serif; font-size: 1.15rem;">
+    <div class="tab-content" style="font-family: Calibri, 'STHeiti Light', 'Heiti SC', 'Microsoft YaHei', '华文细黑', sans-serif; font-size: 1.15rem;">
       <div class="tab-pane fade show active" id="bio" role="tabpanel">
         <h5 class="mt-4 fs-4 text-justify" id="Biography">Short Biography</h5>
         <p class="fs-5 text-justify">
@@ -126,89 +126,122 @@
     <div class="tab-pane fade" id="pub" role="tabpanel">
       <h5 class="mt-4 fs-4 text-justify" id="Publications">Journal</h5>
       <ul class="journal">
-        <li><span style="color: blue;">[TIFS]</span> <strong>Sheng Gao*</strong>, Jingjie Luo, Jianming Zhu, Xuewen Dong, and Weisong Shi.VCD-FL: Verifiable, Collusion-Resistant, and Dynamic Federated Learning. IEEE Transactions on Information Forensics and Security, 18, pp. 3760 - 3773, 2023. [CCF A] <a href="/assets/pdf/">[PDF]</a></li>
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[TIFS]</span>&nbsp<strong>Sheng Gao*</strong>, Jingjie Luo, Jianming Zhu, Xuewen Dong, and Weisong Shi. VCD-FL: Verifiable, Collusion-Resistant, and Dynamic Federated Learning. IEEE Transactions on Information Forensics and Security, 18, pp. 3760 - 3773, 2023. [CCF A] <a href="https://ieeexplore.ieee.org/document/10109820">[PDF]</a></li>
 
-        <li><span style="color: blue;">[TIFS]</span> <strong>Sheng Gao*</strong>, Jianfeng Ma, Weisong Shi, Guoxing Zhan, and Cong Sun. TrPF: A Trajectory Privacy-Preserving Framework for Participatory Sensing. IEEE Transactions on Information Forensics and Security, 8(6), pp. 874-887, 2013. [CCF A] <a href="/assets/pdf/">[PDF]</a></li>
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[TIFS]</span>&nbsp<strong>Sheng Gao*</strong>, Jianfeng Ma, Weisong Shi, Guoxing Zhan, and Cong Sun. TrPF: A Trajectory Privacy-Preserving Framework for Participatory Sensing. IEEE Transactions on Information Forensics and Security, 8(6), pp. 874-887, 2013. [CCF A] <a href="https://ieeexplore.ieee.org/document/6480865/">[PDF]</a></li>
 
-        <li><span style="color: blue;">[TIFS]</span>  Shuai Zhao, Junying Zhang, Xindi Ma, Qi Jiang, Zhuo Ma, <strong>Sheng Gao</strong>, Zuobin Ying, and Jianfeng Ma. <a href="/assets/pdf/" rel="external nofollow noopener" target="_blank">FedWiper: Federated Unlearning via Universal Adapter</a>. IEEE Transactions on Information Forensics and Security, 20: 4042-4054, 2025. [CCF A] </li>
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[TIFS]</span>&nbspShuai Zhao, Junying Zhang, Xindi Ma, Qi Jiang, Zhuo Ma, <strong>Sheng Gao</strong>, Zuobin Ying, and Jianfeng Ma. FedWiper: Federated Unlearning via Universal Adapter. IEEE Transactions on Information Forensics and Security, 20: 4042-4054, 2025. [CCF A] <a href="https://ieeexplore.ieee.org/document/10948501">[PDF]</a></li>
 
-        <li><span style="color: blue;">[TDSC]</span> Zhichao You, Xuewen Dong, Ximeng Liu, <strong>Sheng Gao*</strong>, Yongzhi Wang, and Yulong Shen. <a href="/assets/pdf/" rel="external nofollow noopener" target="_blank">Location Privacy Preservation Crowdsensing with Federated Reinforcement Learning</a>. IEEE Transactions on Dependable and Secure Computing, 22(3): 1877-1894, 2025. [CCF A] </li>
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[TDSC]</span>&nbspZhichao You, Xuewen Dong, Ximeng Liu, <strong>Sheng Gao*</strong>, Yongzhi Wang, and Yulong Shen. Location Privacy Preservation Crowdsensing with Federated Reinforcement Learning. IEEE Transactions on Dependable and Secure Computing, 22(3): 1877-1894, 2025. [CCF A] <a href="https://ieeexplore.ieee.org/document/10526428">[PDF]</a></li>
 
-        <li><span style="color: blue;">[TSC]</span> <strong>Sheng Gao*</strong>, Xiuhua Chen, Jianming Zhu, Xuewen Dong, and Jianfeng Ma. <a href="/assets/pdf/">TrustWorker: A Trustworthy and Privacy-Preserving Worker Selection Scheme for Blockchain-Based Crowdsensing</a>. IEEE Transactions on Services Computing, 15(6): 3577-3590, 2022. [CCF A] </li>
-
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[TSC]</span>&nbsp<strong>Sheng Gao*</strong>, Xiuhua Chen, Jianming Zhu, Xuewen Dong, and Jianfeng Ma. TrustWorker: A Trustworthy and Privacy-Preserving Worker Selection Scheme for Blockchain-Based Crowdsensing. IEEE Transactions on Services Computing, 15(6): 3577-3590, 2022. [CCF A] <a href="https://ieeexplore.ieee.org/document/9511273">[PDF]</a></li>
         
-        <li><span style="color: blue;">[TSC]</span> Xindi Ma, Jianfeng Ma, Hui Li, Qi Jiang, and <strong>Sheng Gao</strong>. <a href="/assets/pdf/PDLM.pdf">PDLM: Privacy-Preserving Deep Learning Model on Cloud with Multiple Keys</a>. IEEE Transactions on Services Computing, 14(4): 1251-1263, 2021. [CCF A] </li>
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[TSC]</span>&nbspXindi Ma, Jianfeng Ma, Hui Li, Qi Jiang, and <strong>Sheng Gao</strong>. PDLM: Privacy-Preserving Deep Learning Model on Cloud with Multiple Keys. IEEE Transactions on Services Computing, 14(4): 1251-1263, 2021. [CCF A] <a href="https://ieeexplore.ieee.org/document/8454831">[PDF]</a></li>
 
-        <li><span style="color: blue;">[TSE]</span> Zhaoxuan Li, Siqi Lu, Rui Zhang, Rujin Liang, Ziming Zhao, Rui Xue, Wenhao Li, Fan Zhang, and <strong>Sheng Gao</strong>. <a href="/assets/pdf/" rel="external nofollow noopener" target="_blank">VulHunter: Hunting Vulnerable Smart Contracts at EVM Bytecode-Level via Multiple Instance Learning</a>. IEEE Transactions on Software Engineering, 49(11): 4886-4916, 2023. [CCF A] </li>
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[TSE]</span>&nbspZhaoxuan Li, Siqi Lu, Rui Zhang, Rujin Liang, Ziming Zhao, Rui Xue, Wenhao Li, Fan Zhang, and <strong>Sheng Gao</strong>. VulHunter: Hunting Vulnerable Smart Contracts at EVM Bytecode-Level via Multiple Instance Learning. IEEE Transactions on Software Engineering, 49(11): 4886-4916, 2023. [CCF A] <a href="https://ieeexplore.ieee.org/document/10261219">[PDF]</a></li>
 
-        <li><span style="color: blue;">[SCIS]</span> <strong>Sheng Gao*</strong>, Xindi Ma, Jianming Zhu, and Jianfeng Ma. <a href="/assets/pdf/">APRS: A Privacy-Preserving Location-Aware Recommender System Based on Differentially Private Histogram</a>.  Science China Information Sciences, 60(9), 2017. [CCF A] </li>
-
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[SCIS]</span>&nbsp<strong>Sheng Gao*</strong>, Xindi Ma, Jianming Zhu, and Jianfeng Ma. APRS: A Privacy-Preserving Location-Aware Recommender System Based on Differentially Private Histogram. Science China Information Sciences, 60(9): 119103, 2017. [CCF A] <a href="https://link.springer.com/article/10.1007/s11432-017-9222-7">[PDF]</a></li>
         
-       <li><span style="color: blue;">[SCIS]</span> Xindi Ma, Hui Li, Jianfeng Ma, Qi Jiang, <strong>Sheng Gao</strong>, Ning Xi, and Di Lu. <a href="/assets/pdf/、" rel="external nofollow noopener" target="_blank">APPLET: A Privacy-Preserving Framework for Location-Aware Recommender System</a>. Science China Information Sciences, 60(9): 092101, 2017. [CCF A] </li>
+       <li><span style="color: blue;">&nbsp&nbsp&nbsp[SCIS]</span>&nbspXindi Ma, Hui Li, Jianfeng Ma, Qi Jiang, <strong>Sheng Gao</strong>, Ning Xi, and Di Lu. APPLET: A Privacy-Preserving Framework for Location-Aware Recommender System. Science China Information Sciences, 60(9): 092101, 2017. [CCF A] <a href="https://link.springer.com/article/10.1007/s11432-015-0981-4">[PDF]</a></li>
        
-       <li><span style="color: blue;">[SCIS]</span> Cong Sun, Ning Xi, <strong>Sheng Gao</strong>, Zhong Chen, and Jianfeng Ma <a href="/assets/pdf/" rel="external nofollow noopener" target="_blank">Automated Enforcement for Relaxed Information Release with Reference Points</a>. Science China Information Sciences, 57(11), 2017. [CCF A] </li>
+       <li><span style="color: blue;">&nbsp[SCIS]</span>&nbspCong Sun, Ning Xi, <strong>Sheng Gao</strong>, Zhong Chen, and Jianfeng Ma. Automated Enforcement for Relaxed Information Release with Reference Points. Science China Information Sciences, 57(11), 2017. [CCF A] <a href="https://link.springer.com/article/10.1007/s11432-014-5168-7">[PDF]</a></li>
 
-       <li><span style="color: blue;">[TCC]</span> <strong>Sheng Gao*</strong>, Yuqi Chen, Jianming Zhu, Zhiyuan Sui, Rui Zhang, and Xindi Ma*. <a href="/assets/pdf/" rel="external nofollow noopener" target="_blank">BPMS: Blockchain-Based Privacy-Preserving Multi-Keyword Search in Multi-Owner Setting</a>. IEEE Transactions on Cloud Computing, 11(3): 2260-2272, 2023. </li>
+       <li><span style="color: blue;">&nbsp[TCC]</span>&nbsp<strong>Sheng Gao*</strong>, Yuqi Chen, Jianming Zhu, Zhiyuan Sui, Rui Zhang, and Xindi Ma*. BPMS: Blockchain-Based Privacy-Preserving Multi-Keyword Search in Multi-Owner Setting. IEEE Transactions on Cloud Computing, 11(3): 2260-2272, 2023. <a href="https://ieeexplore.ieee.org/document/9851534">[PDF]</a></li>
 
-       <li><span style="color: blue;">[TVT]</span> <strong>Sheng Gao*</strong>, Guirong Piao, Jianming Zhu, Xindi Ma, Jianfeng Ma. <a href="/assets/pdf/">TrustAccess: A Trustworthy Secure Ciphertext-Policy and Attribute Hiding Access Control Scheme Based on Blockchain</a>. IEEE Transactions on Vehicular Technology, 69(6): 5784-5798, 2020. </li>
+       <li><span style="color: blue;">&nbsp[TVT]</span>&nbsp<strong>Sheng Gao*</strong>, Guirong Piao, Jianming Zhu, Xindi Ma, Jianfeng Ma. TrustAccess: A Trustworthy Secure Ciphertext-Policy and Attribute Hiding Access Control Scheme Based on Blockchain. IEEE Transactions on Vehicular Technology, 69(6): 5784-5798, 2020. <a href="https://ieeexplore.ieee.org/document/8961176">[PDF]</a></li>
 
-       <li><span style="color: blue;">[Software]</span> <strong>Sheng Gao*</strong>, Wenting Liu, Jianming Zhu, Xuewen Dong, and Jin Dong. <a href="/assets/pdf/">BPMN-LLM: Transforming BPMN Models into Smart Contracts Using Large Language Models</a>. IEEE Software, 42 (4): 50-57, 2025. </li>
+       <li><span style="color: blue;">&nbsp[Software]</span>&nbsp<strong>Sheng Gao*</strong>, Wenting Liu, Jianming Zhu, Xuewen Dong, and Jin Dong. BPMN-LLM: Transforming BPMN Models into Smart Contracts Using Large Language Models. IEEE Software, 42 (4): 50-57, 2025. <a href="https://ieeexplore.ieee.org/document/10935604">[PDF]</a></li>
 
-       <li><span style="color: blue;">[TOMM]</span> Qinnan Zhang, Zehui Xiong*, Jianming Zhu, <strong>Sheng Gao*</strong>, and Wanting Yang. <a href="/assets/pdf/" rel="external nofollow noopener" target="_blank">A Privacy-preserving Auction Mechanism for Learning Model as an NFT in Blockchain-Driven Metaverse</a>. ACM Transactions on Multimedia Computing, Communications, and Applications, 20(7): 1–24, 2024. [CCF B]</li>  
+       <li><span style="color: blue;">&nbsp[TOMM]</span>&nbspQinnan Zhang, Zehui Xiong*, Jianming Zhu, <strong>Sheng Gao*</strong>, and Wanting Yang. A Privacy-preserving Auction Mechanism for Learning Model as an NFT in Blockchain-Driven Metaverse. ACM Transactions on Multimedia Computing, Communications, and Applications, 20(7): 1–24, 2024. <a href="https://dl.acm.org/doi/10.1145/3599971">[PDF]</a></li>  
 
-       <li><span style="color: blue;">[TII]</span> Qianqian Su, Rui Zhang*, Rui Xue, Sun You, and <strong>Sheng Gao*</strong>. <a href="/assets/pdf/" rel="external nofollow noopener" target="_blank">Distributed Attribute-Based Signature with Attribute Dynamic Update for Smart Grid</a>. IEEE Transactions on Industrial Informatics, 19(9):9424-9435, 2023. [中科院1区Top] </li>
+       <li><span style="color: blue;">&nbsp[TII]</span>&nbspQianqian Su, Rui Zhang*, Rui Xue, Sun You, and <strong>Sheng Gao*</strong>. Distributed Attribute-Based Signature with Attribute Dynamic Update for Smart Grid. IEEE Transactions on Industrial Informatics, 19(9):9424-9435, 2023. <a href="https://ieeexplore.ieee.org/document/9982430">[PDF]</a></li> 
 
-       <li><span style="color: blue;">[TII]</span> Xuewen Dong, Wen Zhang, Yushu Zhang, Zhichao You, <strong>Sheng Gao*</strong>, Yulong Shen*, and Chao Wang. <a href="/assets/pdf/">Optimizing Task Location Privacy in Mobile Crowdsensing Systems</a>. IEEE Transactions on Industrial Informatics, 18(4): 2762-2772, 2022. [中科院1区Top] </li>
+       <li><span style="color: blue;">&nbsp[TII]</span>&nbspXuewen Dong, Wen Zhang, Yushu Zhang, Zhichao You, <strong>Sheng Gao*</strong>, Yulong Shen*, and Chao Wang. Optimizing Task Location Privacy in Mobile Crowdsensing Systems. IEEE Transactions on Industrial Informatics, 18(4): 2762-2772, 2022. <a href="https://ieeexplore.ieee.org/document/9528935">[PDF]</a></li> 
 
-       <li><span style="color: blue;">[IoTJ]</span> Xindi Ma, Baopu Li, Qi Jiang, Yimin Chen, <strong>Sheng Gao*</strong>, and Jianfeng Ma. <a href="/assets/pdf/">NOSnoop: An Effective Collaborative Meta-Learning Scheme Against Property Inference Attack</a>. IEEE Internet of Things Journal, 9(9): 6778-6789, 2022. [中科院1区Top] </li>
+       <li><span style="color: blue;">&nbsp[IoTJ]</span>&nbspXindi Ma, Baopu Li, Qi Jiang, Yimin Chen, <strong>Sheng Gao*</strong>, and Jianfeng Ma. NOSnoop: An Effective Collaborative Meta-Learning Scheme Against Property Inference Attack. IEEE Internet of Things Journal, 9(9): 6778-6789, 2022. <a href="https://ieeexplore.ieee.org/document/9538829">[PDF]</a></li> 
 
-       <li><span style="color: blue;">[ESWA]</span> Honglei Xu, <strong>Sheng Gao*</strong>, and Jianming Zhu. <a href="/assets/pdf/">Harmony in Diversity: Personalized Federated Learning against Statistical Heterogeneity via a De-personalized Feature Process</a>. Expert Systems with Applications, 290(2025) 128323. </li>
+       <li><span style="color: blue;">&nbsp[ESWA]</span>&nbspHonglei Xu, <strong>Sheng Gao*</strong>, and Jianming Zhu. Harmony in Diversity: Personalized Federated Learning against Statistical Heterogeneity via a De-personalized Feature Process. Expert Systems with Applications, 290(2025) 128323. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0957417425019426">[PDF]</a></li> 
 
-       <li><span style="color: blue;">[JNCA]</span><strong>Sheng Gao*</strong>, Jianfeng Ma, Cong Sun, and Xinghua Li. <a href="/assets/pdf/" rel="external nofollow noopener" target="_blank">FedWiper: Federated Unlearning via Universal Adapter</a>. Journal of Network and Computer Applications, 38: 125-134, 2014. </li>
+       <li><span style="color: blue;">&nbsp[JNCA]</span>&nbsp<strong>Sheng Gao*</strong>, Jianfeng Ma, Cong Sun, and Xinghua Li. Balancing Trajectory Privacy and Data Utility Using a Personalized Anonymization Model, 38: 125-134, 2014. <a href="https://www.sciencedirect.com/science/article/abs/pii/S1084804513000970">[PDF]</a></li>
 
-       <li><span style="color: blue;">[WCMC]</span><strong>Sheng Gao*</strong>, Jianfeng Ma, Weisong Shi, and Guoxing Zhan. <a href="/assets/pdf/" rel="external nofollow noopener" target="_blank">LTPPM: A Location and Trajectory Privacy Protection Mechanism in Participatory Sensing</a>. Wireless Communications and Mobile Computing, 15(1):155-169, 2015. </li>
+       <li><span style="color: blue;">&nbsp[WCMC]</span>&nbsp<strong>Sheng Gao*</strong>, Jianfeng Ma, Weisong Shi, and Guoxing Zhan. LTPPM: A Location and Trajectory Privacy Protection Mechanism in Participatory Sensing. Wireless Communications and Mobile Computing, 15(1):155-169, 2015. <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/wcm.2324">[PDF]</a></li>
 
-       <li><span style="color: blue;">[ChinaCom]</span><strong>Sheng Gao*</strong>, Tianyu Yu, Jianming Zhu, and Wei Cai. <a href="/assets/pdf/" rel="external nofollow noopener" target="_blank">An EigenTrust-based Practical Byzantine Fault Tolerance Consensus Algorithm</a>. China Communications, 16(12): 111-123, 2019. [CCF CBC2018 Best Paper Award]</li>
+       <li><span style="color: blue;">&nbsp[ChinaCom]</span>&nbsp<strong>Sheng Gao*</strong>, Tianyu Yu, Jianming Zhu, and Wei Cai. An EigenTrust-based Practical Byzantine Fault Tolerance Consensus Algorithm. China Communications, 16(12): 111-123, 2019. [CCF CBC2018 Best Paper Award] <a href="https://ieeexplore.ieee.org/document/8968727">[PDF]</a></li>
 
-       <li><span style="color: blue;">[SCN]</span><strong>Sheng Gao</strong>, Qianqian Su*, Rui Zhang, Jianming Zhu, Zhiyuan Sui, and Junsheng Wang. <a href="/assets/pdf/" rel="external nofollow noopener" target="_blank">A Privacy-Preserving Identity Authentication Scheme Based on the Blockchain</a>. Security and Communication Networks, 2021: 1-10, 2021. </li>
+       <li><span style="color: blue;">&nbsp[ChinaCom]</span>&nbspXindi Ma, Jianfeng Ma, Hui Li, Qi Jiang, and <strong>Sheng Gao</strong>. RTRC: A Reputation-Based Incentive Game Model for Trustworthy Crowdsourcing Service. China Communications, 13(12): 199-215, 2016. <a href="https://ieeexplore.ieee.org/abstract/document/7897544">[PDF]</a></li>
+
+       <li><span style="color: blue;">&nbsp[SCN]</span>&nbsp<strong>Sheng Gao</strong>, Qianqian Su*, Rui Zhang, Jianming Zhu, Zhiyuan Sui, and Junsheng Wang. A Privacy-Preserving Identity Authentication Scheme Based on the Blockchain. Security and Communication Networks, 2021: 1-10, 2021. <a href="https://onlinelibrary.wiley.com/doi/10.1155/2021/9992353">[PDF]</a></li>
        
-       <li><span style="color: blue;">[TOIT]</span> You Sun, Rui Xue, Rui Zhang, Qianqian Su, and <strong>Sheng Gao</strong>. <a href="/assets/pdf/RTChain.pdf">RTChain: A Reputation System with Transaction and Consensus Incentives for E-commerce Blockchain</a>. ACM Transactions on Internet Technology, 21(1):1-24, 2021. [CCF B] </li>
+       <li><span style="color: blue;">&nbsp[Access]</span>&nbspQingyang Ding, <strong>Sheng Gao*</strong>, Jianming Zhu, and Chongxuan Yuan. Permissioned Blockchain-Based Double-Layer Framework for Product Traceability System. IEEE Access, 8: 6209-6225, 2020. <a href="https://ieeexplore.ieee.org/abstract/document/8943216">[PDF]</a></li>
 
-       <li><span style="color: blue;">[TWC]</span> Xuewen Dong, Zhichao You, Liangmin Wang, <strong>Sheng Gao</strong>, Yulong Shen, and Jianfeng Ma. <a href="/assets/pdf/TWC.pdf">A Truthful Online Incentive Mechanism for Nondeterministic Spectrum Allocation</a>. IEEE Transactions on Wireless Communications, 19(7): 4632-4642, 2020. [CCF B] </li>       
+       <li><span style="color: blue;">&nbsp[TOIT]</span>&nbspYou Sun, Rui Xue, Rui Zhang, Qianqian Su, and <strong>Sheng Gao</strong>. RTChain: A Reputation System with Transaction and Consensus Incentives for E-commerce Blockchain. ACM Transactions on Internet Technology, 21(1):1-24, 2021. <a href="https://dl.acm.org/doi/abs/10.1145/3430502">[PDF]</a></li>
 
-       <li><span style="color: blue;">[EMSE]</span> Zhaoxuan Li, Siqi Lu, Rui Zhang, Rui Xue, Wenqiu Ma, Rujin Liang, Ziming Zhao, and <strong>Sheng Gao</strong>. <a href="/assets/pdf/">SmartFast: An Accurate and Robust Formal Analysis Tool for Ethereum Smart Contracts.</a>. Empirical Software Engineering, 27:197, 2022. [CCF B] </li>    
+       <li><span style="color: blue;">&nbsp[TWC]</span>&nbspXuewen Dong, Zhichao You, Liangmin Wang, <strong>Sheng Gao</strong>, Yulong Shen, and Jianfeng Ma. A Truthful Online Incentive Mechanism for Nondeterministic Spectrum Allocation. IEEE Transactions on Wireless Communications, 19(7): 4632-4642, 2020. <a href="https://ieeexplore.ieee.org/document/9063656">[PDF]</a></li>
 
-       <li><span style="color: blue;">[中国科学]</span><strong>高胜*</strong>, 袁丽萍, 朱建明, 马鑫迪, 章睿, 马建峰. <a href="/assets/pdf/">一种基于区块链的隐私保护异步联邦学习.</a> 中国科学:信息科学, 51(10): 1755-1774, 2021. [CCF A] </li>
+       <li><span style="color: blue;">&nbsp[EMSE]</span>&nbspZhaoxuan Li, Siqi Lu, Rui Zhang, Rui Xue, Wenqiu Ma, Rujin Liang, Ziming Zhao, and <strong>Sheng Gao</strong>. SmartFast: An Accurate and Robust Formal Analysis Tool for Ethereum Smart Contracts. Empirical Software Engineering, 27: 197, 2022. <a href="https://link.springer.com/article/10.1007/s10664-022-10218-2">[PDF]</a></li>
 
-       <li><span style="color: blue;">[中国科学]</span>张沁楠, 朱建明, <strong>高胜*</strong>, 熊泽辉, 丁庆洋, 朴桂荣. <a href="/assets/pdf/">基于区块链和贝叶斯博弈的联邦学习激励机制.</a> 中国科学:信息科学, 55(6): 971-991, 2022. [CCF A] </li>
+       <li><span style="color: blue;">&nbsp[FGCS]</span>&nbspXindi Ma, Jianfeng Ma, Hui Li, Qi Jiang, and <strong>Sheng Gao</strong>. ARMOR: A Trust-Based Privacy-Preserving Framework for Decentralized Friend Recommendation in Online Social Networks. Future Generation Computer Systems, 79: 82-94, 2018. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167739X17300547">[PDF]</a></li>
 
-       <li><span style="color: blue;">[中国科学]</span>王玉画, 张沁楠, 邱望洁, 柴子川, <strong>高胜</strong>, 朱建明, 童咏昕, 郑志明. <a href="/assets/pdf/">自适应拜占庭鲁棒的差分隐私联邦学习.</a> 中国科学:信息科学, 2025. [CCF A] </li>
+       <li><span style="color: blue;">&nbsp[PPNA]</span>&nbspXindi Ma, Jianfeng Ma, Hui Li, Qi Jiang, and <strong>Sheng Gao</strong>. AGENT: An Adaptive Geo-Indistinguishable Mechanism for Continuous Location-Based Service. Peer-to-Peer Networking and Applications, 11(3): 473-485, 2018. <a href="https://link.springer.com/article/10.1007/s12083-017-0545-9">[PDF]</a></li>
 
-       <li><span style="color: blue;">[计算机学报]</span><strong>高胜</strong>, 陈秀华*, 朱建明*, 袁丽萍, 马鑫迪, 林晖. <a href="/assets/pdf/">基于区块链的群智感知中任务预算约束的位置隐私保护参与者选择方法.</a> 计算机学报, 45(5): 1052-1067, 2022. [CCF A] </li>
+       <li><span style="color: blue;">&nbsp[中国科学]</span>&nbsp<strong>高胜*</strong>, 袁丽萍, 朱建明, 马鑫迪, 章睿, 马建峰. 一种基于区块链的隐私保护异步联邦学习. 中国科学: 信息科学, 51(10): 1755-1774, 2021. [CCF A] <a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2021-0087">[PDF]</a></li>
 
-       <li><span style="color: blue;">[计算机学报]</span>朱建明, 张沁楠*,<strong>高胜*</strong>, 丁庆洋, 袁丽萍. <a href="/assets/pdf/">基于区块链的隐私保护可信联邦学习模型.</a> 计算机学报, 44(12): 2464-2484, 2021. [CCF A] </li>
+       <li><span style="color: blue;">&nbsp[中国科学]</span>&nbsp张沁楠, 朱建明, <strong>高胜*</strong>, 熊泽辉, 丁庆洋, 朴桂荣. 基于区块链和贝叶斯博弈的联邦学习激励机制. 中国科学: 信息科学, 55(6): 971-991, 2022. [CCF A] <a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2022-0020">[PDF]</a></li>
 
-       <li><span style="color: blue;">[计算机学报]</span>马鑫迪, 李辉, 马建峰, 习宁, 姜奇, <strong>高胜</strong>, 卢笛. <a href="/assets/pdf/">轻量级位置感知推荐系统隐私保护框架.</a> 计算机学报, 40(5), 1017-1030, 2017. [CCF A] </li>
+       <li><span style="color: blue;">&nbsp[中国科学]</span>&nbsp王玉画, 张沁楠, 邱望洁, 柴子川, <strong>高胜</strong>, 朱建明, 童咏昕, 郑志明. 自适应拜占庭鲁棒的差分隐私联邦学习. 中国科学: 信息科学, 2025. [CCF A] <a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0232">[PDF]</a></li>
 
-       <li><span style="color: blue;">[软件学报]</span>李任翔, 蒋忠元*, <strong>高胜*</strong>, 钱肖, 沈秀轩, 刘柄呈, 陶梅悦. <a href="/assets/pdf/">智能合约法律化原则与转化验证模型研究.</a> 软件学报, 36(11): 5298−5335, 2025. [CCF A] </li>
+       <li><span style="color: blue;">&nbsp[计算机学报]</span>&nbsp<strong>高胜</strong>, 陈秀华*, 朱建明*, 袁丽萍, 马鑫迪, 林晖. 基于区块链的群智感知中任务预算约束的位置隐私保护参与者选择方法. 计算机学报, 45(5): 1052-1067, 2022. [CCF A] <a href="http://cjc.ict.ac.cn/online/onlinepaper/gs-2022426184830.pdf">[PDF]</a></li>
 
-       <li><span style="color: blue;">[软件学报]</span>朱建明, 丁庆洋*, <strong>高胜</strong>. <a href="/assets/pdf/">基于许可链的 SWIFT 系统分布式架构.</a> 软件学报, 30(6): 1594-1613, 2019. [CCF A] </li>
+       <li><span style="color: blue;">&nbsp[计算机学报]</span>&nbsp朱建明, 张沁楠*,<strong>高胜*</strong>, 丁庆洋, 袁丽萍. 基于区块链的隐私保护可信联邦学习模型. 计算机学报, 44(12): 2464-2484, 2021. [CCF A] <a href="http://cjc.ict.ac.cn/online/onlinepaper/zjm-20211217121509.pdf">[PDF]</a></li>
 
-       <li><span style="color: blue;">[电子学报]</span>钱肖, 蒋忠元, 陶梅悦, 刘柄呈, 李任翔, <strong>高胜</strong>, 马建峰. <a href="/assets/pdf/">基于上下文感知的智能合约要素提取方法.</a> 电子学报. 53(4): 1322-1336, 2025. [CCF A] </li>
+       <li><span style="color: blue;">&nbsp[计算机学报]</span>&nbsp马鑫迪, 李辉, 马建峰, 习宁, 姜奇, <strong>高胜</strong>, 卢笛. 轻量级位置感知推荐系统隐私保护框架. 计算机学报, 40(5), 1017-1030, 2017. [CCF A] <a href="http://cjc.ict.ac.cn/online/onlinepaper/mxd-20175682608.pdf">[PDF]</a></li>
 
-       <li><span style="color: blue;">[计研发]</span>孙聪, 习宁, <strong>高胜</strong>, 张涛, 李金库, 马建峰. <a href="/assets/pdf/">基于接口精化的广义无干扰性研究.</a> 计算机研究与发展, 52(7):1631-1641, 2015. [CCF A] </li>
+       <li><span style="color: blue;">&nbsp[软件学报]</span>&nbsp李任翔, 蒋忠元*, <strong>高胜*</strong>, 钱肖, 沈秀轩, 刘柄呈, 陶梅悦. 智能合约法律化原则与转化验证模型研究. 软件学报, 36(11): 5298−5335, 2025. [CCF A] <a href="https://www.jos.org.cn/jos/article/abstract/7386">[PDF]</a></li>
 
-       <li><span style="color: blue;">[通信学报]</span><strong>高胜*</strong>, , 马建峰. <a href="/assets/pdf/">LBS中面向协同位置隐私保护的群组最近邻查询.</a> 通信学报, 36(3):146-154, 2015. [CCF A] </li>
+       <li><span style="color: blue;">&nbsp[软件学报]</span>&nbsp朱建明, 丁庆洋*, <strong>高胜</strong>. 基于许可链的 SWIFT 系统分布式架构. 软件学报, 30(6): 1594-1613, 2019. [CCF A] <a href="https://www.jos.org.cn/jos/article/abstract/5738">[PDF]</a></li>
 
-       <li><span style="color: blue;">[通信学报]</span><strong>高胜</strong>, 向康, 田有亮*, 谭伟杰, 冯涛, 吴晓雪. <a href="/assets/pdf/">基于 BCP的联合委托学习模型及协议.</a> 通信学报, 42(5):137-148, 2021. </li>
+       <li><span style="color: blue;">&nbsp[电子学报]</span>&nbsp钱肖, 蒋忠元, 陶梅悦, 刘柄呈, 李任翔, <strong>高胜</strong>, 马建峰. 基于上下文感知的智能合约要素提取方法. 电子学报. 53(4): 1322-1336, 2025. [CCF A] <a href="https://www.ejournal.org.cn/thesisDetails#10.12263/DZXB.20241038&lang=zh">[PDF]</a></li>
+
+       <li><span style="color: blue;">&nbsp[计研发]</span>&nbsp孙聪, 习宁, <strong>高胜</strong>, 张涛, 李金库, 马建峰. 基于接口精化的广义无干扰性研究. 计算机研究与发展, 52(7):1631-1641, 2015. [CCF A] <a href="https://crad.ict.ac.cn/cn/article/doi/10.7544/issn1000-1239.2015.20140306">[PDF]</a></li>
+
+       <li><span style="color: blue;">&nbsp[通信学报]</span>&nbsp<strong>高胜*</strong>, 马建峰, 姚青松, 孙聪. LBS中面向协同位置隐私保护的群组最近邻查询. 通信学报, 36(3):146-154, 2015.  <a href="">[PDF]</a></li>
+
+       <li><span style="color: blue;">&nbsp[通信学报]</span>&nbsp<strong>高胜</strong>, 向康, 田有亮*, 谭伟杰, 冯涛, 吴晓雪. 基于 BCP的联合委托学习模型及协议. 通信学报, 42(5):137-148, 2021. <a href="">[PDF]</a></li>
 
       </ul>
       <hr>
       <h5 class="mt-4 fs-4 text-justify" id="Publications">Conference</h5>
-      <ul class="conf1">
+      <ul class="conference">
+        
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[MobiCASE]</span>&nbsp<strong>Sheng Gao</strong>, Jianfeng Ma, Weisong Shi, Guoxing Zhan. Towards Location and Trajectory Privacy Protection in Participatory Sensing. Proc. of International Conference on Mobile Computing, Applications, and Services (MobiCASE 2011), Los Angeles, CA, USA, 2011: 381–386. <a href="https://link.springer.com/chapter/10.1007/978-3-642-32320-1_29">[PDF]</a></li>
 
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[INFOCOM]</span>&nbspLingxiao Yang, Xuewen Dong, Zhiguo Wan, <strong>Sheng Gao</strong>, Wei Tong, Di Lu, Yulong Shen, and Xiaojiang Du. AsyncSC: An Asynchronous Sidechain for Multi-Domain Data Exchange in Internet of Things. Proc. of IEEE Conference on Computer Communications (INFOCOM 2025), London, United Kingdom, 2025: 1-10. <a href="https://ieeexplore.ieee.org/document/11044780">[PDF]</a></li>
 
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[ICDCS]</span>&nbspLingxiao Yang, Xuewen Dong, <strong>Sheng Gao</strong>, Qiang Qu, Xiaodong Zhang, Wensheng Tian, and Yulong Shen. Optimal Hub Placement and Deadlock-Free Routing for Payment Channel Network Scalability. Proc. of the 43rd IEEE International Conference on Distributed Computing Systems (ICDCS 2023), Hong Kong, China, 2023: 692-702. <a href="https://ieeexplore.ieee.org/abstract/document/10272518">[PDF]</a></li>
 
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[APWeb]</span>&nbspCong Sun, <strong>Sheng Gao</strong>, and Jianfeng Ma. Verifying Location-Based Services with Declassification Enforcement. Proc. of 14th Asia-Pacific Web Conference (APWeb 2012), Kunming, China: 695–702. <a href="https://link.springer.com/chapter/10.1007/978-3-642-29253-8_66">[PDF]</a></li>
+
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[DSC]</span>&nbspYonggui Fu, Jianming Zhu, and <strong>Sheng Gao</strong>. CPS Information Security Risk Evaluation System Based on Petri Net. Proc. of International Conference on Computing, Networking and Communication (ICNC 2016), Kauai, Hawaii, USA, 2016: 1-6. <a href="https://ieeexplore.ieee.org/abstract/document/8005529">[PDF]</a></li>
+
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[ICNC]</span>&nbspBen Niu, <strong>Sheng Gao</strong>, Fenghua Li, Hui Li, and Zongqing Lu. Protection of Location Privacy in Continuous LBSs Against Adversaries with Background Information. Proc. of IEEE Second International Conference on Data Science in Cyberspace (DSC 2017), Shenzhen, China, 2017: 541-548. <a href="https://ieeexplore.ieee.org/abstract/document/7440649">[PDF]</a></li>
+
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[INFOCOM WKSHPS]</span>&nbspBowen Xiao, Xiaoyi Fan, <strong>Sheng Gao</strong>, and Wei Cai. EdgeToll: A Blockchain-based Toll Collection System for Public Sharing of Heterogeneous Edges. Proc. of IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS 2019), Paris, France, 2019: 1-6. <a href="https://ieeexplore.ieee.org/abstract/document/9093792">[PDF]</a></li>
+        
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[INFOCOM WKSHPS]</span>&nbspDuo Zhang, Youliang Tian, Linjie Wang, <strong>Sheng Gao</strong>, and Jianfeng Ma. Cooperative Game Model of Delegation Computing: Verifier Separated from Calculators. Proc. of IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS 2020), Toronto, ON, Canada, 2020: 62-67. <a href="https://ieeexplore.ieee.org/abstract/document/9162946">[PDF]</a></li>
+
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[MetaCom]</span>&nbspQinnan Zhang, Zehui Xiong, Jianming Zhu, <strong>Sheng Gao</strong>, Wanting Yang, and Dusit Niyato. Ownership Tokenization and Incentive Design for Learning-based User-Generated Content. Proc. of IEEE International Conference on Metaverse Computing, Networking and Applications (MetaCom 2023), Kyoto, Japan, 2023: 306-313. <a href="https://ieeexplore.ieee.org/abstract/document/10271926">[PDF]</a></li>
+
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[MSN]</span>&nbspXindi Ma, Jianfeng Ma, <strong>Sheng Gao</strong>, and Qingsong Yao. APDL: A Practical Privacy-Preserving Deep Learning Model for Smart Devices. Proc. of International Conference on Mobile Ad-Hoc and Sensor Networks (MSN 2017), Beijing, China, 2017: 377–390. <a href="https://link.springer.com/chapter/10.1007/978-981-10-8890-2_28">[PDF]</a></li>
+
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[SPDE]</span>&nbspDuo Zhang, Xiaodong Zhang, <strong>Sheng Gao</strong>, and Youliang Tian. Bitcoin-Based Anti-collusion Fair Payments for Outsourcing Computations in Cloud Computing. Proc. of International Conference on Security and Privacy in Digital Economy (SPDE 2020), Quzhou, China, 2020: 309–321. <a href="https://link.springer.com/chapter/10.1007/978-981-15-9129-7_22">[PDF]</a></li>
+
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[ICCVE]</span>&nbspXinghua Li, Lingjuan Deng, <strong>Sheng Gao</strong>, Jianfeng Ma, and Qingsong Yao. A Demand-Aware Location Privacy Protection Scheme in Continuous Location-based Services. Proc. of International Conference on Connected Vehicles and Expo (ICCVE 2014), Vienna, Austria, 2014: 112-117. <a href="https://ieeexplore.ieee.org/abstract/document/7297523">[PDF]</a></li>
+
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[NaNA]</span>&nbspXindi Ma, Junying Zhang, Jianfeng Ma, Qi Jiang, <strong>Sheng Gao</strong>, and Kang Xie. Do Not Perturb Me: A Secure Byzantine-Robust Mechanism for Machine Learning in IoT. Proc. of International Conference on Networking and Network Applications (NaNA 2020), Haikou City, China, 2020: 348-354. <a href="https://ieeexplore.ieee.org/abstract/document/9353803">[PDF]</a></li>
+
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[NaNA]</span>&nbspKang Xiang, Youliang Tian, <strong>Sheng Gao</strong>, Changgen Peng, Weijie Tan. Rational Delegation Learning Outsourcing Scheme Based on Game Theory. Proc. of International Conference on Networking and Network Applications (NaNA 2020), Haikou City, China, 2020: 130-135. <a href="https://ieeexplore.ieee.org/abstract/document/9353803">[PDF]</a></li>
+
+        <li><span style="color: blue;">&nbsp&nbsp&nbsp[NaNA]</span>&nbspXindi Ma, Cunzhu Su, Jianfeng Ma, Qi Jiang, Ning Xi, and <strong>Sheng Gao</strong>. Self-Anomaly-Detection Model Training via Initialized Meta Model. Proc. of International Conference on Networking and Network Applications (NaNA 2022), Urumqi, China, 2022: 471-476. <a href="https://ieeexplore.ieee.org/abstract/document/9353803">[PDF]</a></li>
     </div> 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
