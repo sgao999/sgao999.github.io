@@ -31,7 +31,7 @@
         list-style-type: none;
         counter-reset: jCounter cCounter zCounter pCounter;
     }
- .journal li, .chinese li, .conference li, .zl li{
+ .journal li, .chinese li, .conference li, .patent li{
         list-style-type: none; /* 移除列表项默认的符号 */
         text-indent: -4ch;
         margin-top: 1.5em;
@@ -57,11 +57,11 @@
     .conference li::before {
         content: "[C" counter(cCounter) "] ";
     }
-    .zl li {
-        counter-increment: zCounter;
+    .patent li {
+        counter-increment: pCounter;
     }
-    .zl li::before {
-        content: "[P" counter(zCounter) "] ";
+    .patent li::before {
+        content: "[P" counter(pCounter) "] ";
     }
 </style>
 </head>
@@ -191,7 +191,7 @@
       </ul> 
     <hr>
     <h5 class="mt-4 fs-4 text-justify" id="Publications">Chinese Papers</h5>
-    <ul class="Chinese">
+    <ul class="chinese">
       <li><span style="color: blue;">&nbsp[中国科学]</span>&nbsp<strong>高胜*</strong>, 袁丽萍, 朱建明, 马鑫迪, 章睿, 马建峰. 一种基于区块链的隐私保护异步联邦学习. 中国科学: 信息科学, 51(10): 1755-1774, 2021. [CCF A] <a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2021-0087">[PDF]</a></li>
     
       <li><span style="color: blue;">&nbsp[中国科学]</span>&nbsp张沁楠, 朱建明, <strong>高胜*</strong>, 熊泽辉, 丁庆洋, 朴桂荣. 基于区块链和贝叶斯博弈的联邦学习激励机制. 中国科学: 信息科学, 55(6): 971-991, 2022. [CCF A] <a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2022-0020">[PDF]</a></li>
