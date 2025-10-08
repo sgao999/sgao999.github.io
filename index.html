@@ -31,7 +31,7 @@
         list-style-type: none;
         counter-reset: jCounter cCounter zCounter pCounter;
     }
- .journal li, .conference li, .zl li{
+ .journal li, .chinese li, .conference li, .zl li{
         list-style-type: none; /* 移除列表项默认的符号 */
         text-indent: -4ch;
         margin-top: 1.5em;
@@ -45,6 +45,12 @@
     .journal li::before {
         content: "[J" counter(jCounter) "] ";
     }
+    .chinese li {
+        counter-increment: zCounter;
+    }
+    .chinese li::before {
+        content: "[Z" counter(zCounter) "] ";
+    }
     .conference li {
         counter-increment: cCounter;
     }
@@ -57,7 +63,6 @@
     .zl li::before {
         content: "[P" counter(zCounter) "] ";
     }
-  
 </style>
 </head>
 
@@ -183,65 +188,111 @@
        <li><span style="color: blue;">&nbsp[FGCS]</span>&nbspXindi Ma, Jianfeng Ma, Hui Li, Qi Jiang, and <strong>Sheng Gao</strong>. ARMOR: A Trust-Based Privacy-Preserving Framework for Decentralized Friend Recommendation in Online Social Networks. Future Generation Computer Systems, 79: 82-94, 2018. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167739X17300547">[PDF]</a></li>
 
        <li><span style="color: blue;">&nbsp[PPNA]</span>&nbspXindi Ma, Jianfeng Ma, Hui Li, Qi Jiang, and <strong>Sheng Gao</strong>. AGENT: An Adaptive Geo-Indistinguishable Mechanism for Continuous Location-Based Service. Peer-to-Peer Networking and Applications, 11(3): 473-485, 2018. <a href="https://link.springer.com/article/10.1007/s12083-017-0545-9">[PDF]</a></li>
+      </ul> 
+    <hr>
+    <h5 class="mt-4 fs-4 text-justify" id="Publications">Chinese Papers</h5>
+    <ul class="Chinese">
+      <li><span style="color: blue;">&nbsp[中国科学]</span>&nbsp<strong>高胜*</strong>, 袁丽萍, 朱建明, 马鑫迪, 章睿, 马建峰. 一种基于区块链的隐私保护异步联邦学习. 中国科学: 信息科学, 51(10): 1755-1774, 2021. [CCF A] <a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2021-0087">[PDF]</a></li>
+    
+      <li><span style="color: blue;">&nbsp[中国科学]</span>&nbsp张沁楠, 朱建明, <strong>高胜*</strong>, 熊泽辉, 丁庆洋, 朴桂荣. 基于区块链和贝叶斯博弈的联邦学习激励机制. 中国科学: 信息科学, 55(6): 971-991, 2022. [CCF A] <a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2022-0020">[PDF]</a></li>
 
-       <li><span style="color: blue;">&nbsp[中国科学]</span>&nbsp<strong>高胜*</strong>, 袁丽萍, 朱建明, 马鑫迪, 章睿, 马建峰. 一种基于区块链的隐私保护异步联邦学习. 中国科学: 信息科学, 51(10): 1755-1774, 2021. [CCF A] <a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2021-0087">[PDF]</a></li>
+      <li><span style="color: blue;">&nbsp[中国科学]</span>&nbsp王玉画, 张沁楠, 邱望洁, 柴子川, <strong>高胜</strong>, 朱建明, 童咏昕, 郑志明. 自适应拜占庭鲁棒的差分隐私联邦学习. 中国科学: 信息科学, 2025. [CCF A] <a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0232">[PDF]</a></li>
 
-       <li><span style="color: blue;">&nbsp[中国科学]</span>&nbsp张沁楠, 朱建明, <strong>高胜*</strong>, 熊泽辉, 丁庆洋, 朴桂荣. 基于区块链和贝叶斯博弈的联邦学习激励机制. 中国科学: 信息科学, 55(6): 971-991, 2022. [CCF A] <a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2022-0020">[PDF]</a></li>
+      <li><span style="color: blue;">&nbsp[计算机学报]</span>&nbsp<strong>高胜</strong>, 陈秀华*, 朱建明*, 袁丽萍, 马鑫迪, 林晖. 基于区块链的群智感知中任务预算约束的位置隐私保护参与者选择方法. 计算机学报, 45(5): 1052-1067, 2022. [CCF A] <a href="http://cjc.ict.ac.cn/online/onlinepaper/gs-2022426184830.pdf">[PDF]</a></li>
+      
+      <li><span style="color: blue;">&nbsp[计算机学报]</span>&nbsp朱建明, 张沁楠*,<strong>高胜*</strong>, 丁庆洋, 袁丽萍. 基于区块链的隐私保护可信联邦学习模型. 计算机学报, 44(12): 2464-2484, 2021. [CCF A] <a href="http://cjc.ict.ac.cn/online/onlinepaper/zjm-20211217121509.pdf">[PDF]</a></li>
 
-       <li><span style="color: blue;">&nbsp[中国科学]</span>&nbsp王玉画, 张沁楠, 邱望洁, 柴子川, <strong>高胜</strong>, 朱建明, 童咏昕, 郑志明. 自适应拜占庭鲁棒的差分隐私联邦学习. 中国科学: 信息科学, 2025. [CCF A] <a href="https://www.sciengine.com/SSI/doi/10.1360/SSI-2025-0232">[PDF]</a></li>
+      <li><span style="color: blue;">&nbsp[计算机学报]</span>&nbsp马鑫迪, 李辉, 马建峰, 习宁, 姜奇, <strong>高胜</strong>, 卢笛. 轻量级位置感知推荐系统隐私保护框架. 计算机学报, 40(5), 1017-1030, 2017. [CCF A] <a href="http://cjc.ict.ac.cn/online/onlinepaper/mxd-20175682608.pdf">[PDF]</a></li>
 
-       <li><span style="color: blue;">&nbsp[计算机学报]</span>&nbsp<strong>高胜</strong>, 陈秀华*, 朱建明*, 袁丽萍, 马鑫迪, 林晖. 基于区块链的群智感知中任务预算约束的位置隐私保护参与者选择方法. 计算机学报, 45(5): 1052-1067, 2022. [CCF A] <a href="http://cjc.ict.ac.cn/online/onlinepaper/gs-2022426184830.pdf">[PDF]</a></li>
+      <li><span style="color: blue;">&nbsp[软件学报]</span>&nbsp李任翔, 蒋忠元*, <strong>高胜*</strong>, 钱肖, 沈秀轩, 刘柄呈, 陶梅悦. 智能合约法律化原则与转化验证模型研究. 软件学报, 36(11): 5298−5335, 2025. [CCF A] <a href="https://www.jos.org.cn/jos/article/abstract/7386">[PDF]</a></li>
 
-       <li><span style="color: blue;">&nbsp[计算机学报]</span>&nbsp朱建明, 张沁楠*,<strong>高胜*</strong>, 丁庆洋, 袁丽萍. 基于区块链的隐私保护可信联邦学习模型. 计算机学报, 44(12): 2464-2484, 2021. [CCF A] <a href="http://cjc.ict.ac.cn/online/onlinepaper/zjm-20211217121509.pdf">[PDF]</a></li>
+      <li><span style="color: blue;">&nbsp[软件学报]</span>&nbsp朱建明, 丁庆洋*, <strong>高胜</strong>. 基于许可链的 SWIFT 系统分布式架构. 软件学报, 30(6): 1594-1613, 2019. [CCF A] <a href="https://www.jos.org.cn/jos/article/abstract/5738">[PDF]</a></li>
 
-       <li><span style="color: blue;">&nbsp[计算机学报]</span>&nbsp马鑫迪, 李辉, 马建峰, 习宁, 姜奇, <strong>高胜</strong>, 卢笛. 轻量级位置感知推荐系统隐私保护框架. 计算机学报, 40(5), 1017-1030, 2017. [CCF A] <a href="http://cjc.ict.ac.cn/online/onlinepaper/mxd-20175682608.pdf">[PDF]</a></li>
+      <li><span style="color: blue;">&nbsp[电子学报]</span>&nbsp钱肖, 蒋忠元, 陶梅悦, 刘柄呈, 李任翔, <strong>高胜</strong>, 马建峰. 基于上下文感知的智能合约要素提取方法. 电子学报. 53(4): 1322-1336, 2025. [CCF A] <a href="https://www.ejournal.org.cn/thesisDetails#10.12263/DZXB.20241038&lang=zh">[PDF]</a></li>
 
-       <li><span style="color: blue;">&nbsp[软件学报]</span>&nbsp李任翔, 蒋忠元*, <strong>高胜*</strong>, 钱肖, 沈秀轩, 刘柄呈, 陶梅悦. 智能合约法律化原则与转化验证模型研究. 软件学报, 36(11): 5298−5335, 2025. [CCF A] <a href="https://www.jos.org.cn/jos/article/abstract/7386">[PDF]</a></li>
+      <li><span style="color: blue;">&nbsp[计研发]</span>&nbsp孙聪, 习宁, <strong>高胜</strong>, 张涛, 李金库, 马建峰. 基于接口精化的广义无干扰性研究. 计算机研究与发展, 52(7): 1631-1641, 2015. [CCF A] <a href="https://crad.ict.ac.cn/cn/article/doi/10.7544/issn1000-1239.2015.20140306">[PDF]</a></li>
 
-       <li><span style="color: blue;">&nbsp[软件学报]</span>&nbsp朱建明, 丁庆洋*, <strong>高胜</strong>. 基于许可链的 SWIFT 系统分布式架构. 软件学报, 30(6): 1594-1613, 2019. [CCF A] <a href="https://www.jos.org.cn/jos/article/abstract/5738">[PDF]</a></li>
+      <li><span style="color: blue;">&nbsp[通信学报]</span>&nbsp<strong>高胜*</strong>, 马建峰, 姚青松, 孙聪. LBS中面向协同位置隐私保护的群组最近邻查询. 通信学报, 36(3): 146-154, 2015.  <a href="">[PDF]</a></li>
 
-       <li><span style="color: blue;">&nbsp[电子学报]</span>&nbsp钱肖, 蒋忠元, 陶梅悦, 刘柄呈, 李任翔, <strong>高胜</strong>, 马建峰. 基于上下文感知的智能合约要素提取方法. 电子学报. 53(4): 1322-1336, 2025. [CCF A] <a href="https://www.ejournal.org.cn/thesisDetails#10.12263/DZXB.20241038&lang=zh">[PDF]</a></li>
+      <li><span style="color: blue;">&nbsp[通信学报]</span>&nbsp<strong>高胜</strong>, 向康, 田有亮*, 谭伟杰, 冯涛, 吴晓雪. 基于 BCP的联合委托学习模型及协议. 通信学报, 42(5): 137-148, 2021. <a href="">[PDF]</a></li>
 
-       <li><span style="color: blue;">&nbsp[计研发]</span>&nbsp孙聪, 习宁, <strong>高胜</strong>, 张涛, 李金库, 马建峰. 基于接口精化的广义无干扰性研究. 计算机研究与发展, 52(7):1631-1641, 2015. [CCF A] <a href="https://crad.ict.ac.cn/cn/article/doi/10.7544/issn1000-1239.2015.20140306">[PDF]</a></li>
+      <li><span style="color: blue;">&nbsp[密码学报]</span>&nbsp王秦, 朱建明, <strong>高胜</strong>. 博弈论与密码协议研究进展. 密码学报, 6(1): 87-99, 2018. <a href="http://www.jcr.cacrnet.org.cn/CN/10.13868/j.cnki.jcr.000286">[PDF]</a></li>
 
-       <li><span style="color: blue;">&nbsp[通信学报]</span>&nbsp<strong>高胜*</strong>, 马建峰, 姚青松, 孙聪. LBS中面向协同位置隐私保护的群组最近邻查询. 通信学报, 36(3):146-154, 2015.  <a href="">[PDF]</a></li>
+      <li><span style="color: blue;">&nbsp[西电学报]</span>&nbsp王玉画, <strong>高胜</strong>, 朱建明, 黄晨. 自适应差分隐私的高效深度学习方案. 西安电子科技大学学报, 50(4): 54-64, 2023. <a href="https://journal_xdxb.xidian.edu.cn/zh/article/doi/10.19665/j.issn1001-2400.2023.04.006/">[PDF]</a></li>
 
-       <li><span style="color: blue;">&nbsp[通信学报]</span>&nbsp<strong>高胜</strong>, 向康, 田有亮*, 谭伟杰, 冯涛, 吴晓雪. 基于 BCP的联合委托学习模型及协议. 通信学报, 42(5):137-148, 2021. <a href="">[PDF]</a></li>
+      <li><span style="color: blue;">&nbsp[西电学报]</span>&nbsp马鑫迪, 马建峰, <strong>高胜</strong>. 室内定位系统中指纹库的优化方法. 西安电子科技大学学报, 42(6): 81-87, 2015. <a href="https://journal_xdxb.xidian.edu.cn/zh/article/doi/10.3969/j.issn.1001-2400.2015.06.015/">[PDF]</a></li>
 
-      </ul>
-      <hr>
-      <h5 class="mt-4 fs-4 text-justify" id="Publications">Conference</h5>
+      <li><span style="color: blue;">&nbsp[太原理工大学学报]</span>&nbsp朱建明*, 张沁楠, <strong>高胜</strong>. 区块链关键技术及其应用研究进展. 太原理工大学学报, 51(3): 321-330, 2020. <a href="https://journal_xdxb.xidian.edu.cn/zh/article/doi/10.3969/j.issn.1001-2400.2015.06.015/">[PDF]</a></li>
+
+      <li><span style="color: blue;">&nbsp[图书情报工作]</span>&nbsp<strong>高胜</strong>, 朱建明. 基于区块链技术的新型分层数字图书馆体系架构. 图书情报工作, 62(24): 57-64, 2018. <a href="https://www.lis.ac.cn/CN/10.13266/j.issn.0252-3116.2018.24.008">[PDF]</a></li>
+
+      <li><span style="color: blue;">&nbsp[国家图书馆学刊]</span>&nbsp沈凯旋, <strong>高胜</strong>, 朱建明. LibRSM: 基于联盟链的数字图书馆信息资源安全共享模型. 国家图书馆学刊, 28(2): 77-86, 2019. <a href="https://www.lis.ac.cn/CN/10.13266/j.issn.0252-3116.2018.24.008">[PDF]</a></li>
+
+      <li><span style="color: blue;">&nbsp[经济学动态]</span>&nbsp贾传昌, 朱建明, <strong>高胜</strong>. 隐私经济学研究进展. 经济学动态, 3: 139-157, 2022. <a href="http://www.ndhx.net/tougao/qikan-183697.html">[PDF]</a></li>
+
+      <li><span style="color: blue;">&nbsp[网络与信息安全学报]</span>&nbsp张宝, 田有亮, <strong>高胜</strong>. 基于博弈论抗共谋攻击的全局随机化共识算法. 网络与信息安全学报, 8(4): 98-109, 2022. <a href="http://www.ndhx.net/tougao/qikan-183697.html">[PDF]</a></li>
+     </ul>
+     <hr>
+    <h5 class="mt-4 fs-4 text-justify" id="Publications">Conference</h5>
       <ul class="conference">
         
-        <li><span style="color: blue;">&nbsp&nbsp&nbsp[MobiCASE]</span>&nbsp<strong>Sheng Gao</strong>, Jianfeng Ma, Weisong Shi, Guoxing Zhan. Towards Location and Trajectory Privacy Protection in Participatory Sensing. Proc. of International Conference on Mobile Computing, Applications, and Services (MobiCASE 2011), Los Angeles, CA, USA, 2011: 381–386. <a href="https://link.springer.com/chapter/10.1007/978-3-642-32320-1_29">[PDF]</a></li>
+    <li><span style="color: blue;">&nbsp&nbsp&nbsp[MobiCASE]</span>&nbsp<strong>Sheng Gao</strong>, Jianfeng Ma, Weisong Shi, Guoxing Zhan. Towards Location and Trajectory Privacy Protection in Participatory Sensing. Proc. of International Conference on Mobile Computing, Applications, and Services (MobiCASE 2011), Los Angeles, CA, USA, 2011: 381–386. <a href="https://link.springer.com/chapter/10.1007/978-3-642-32320-1_29">[PDF]</a></li>
 
-        <li><span style="color: blue;">&nbsp&nbsp&nbsp[INFOCOM]</span>&nbspLingxiao Yang, Xuewen Dong, Zhiguo Wan, <strong>Sheng Gao</strong>, Wei Tong, Di Lu, Yulong Shen, and Xiaojiang Du. AsyncSC: An Asynchronous Sidechain for Multi-Domain Data Exchange in Internet of Things. Proc. of IEEE Conference on Computer Communications (INFOCOM 2025), London, United Kingdom, 2025: 1-10. <a href="https://ieeexplore.ieee.org/document/11044780">[PDF]</a></li>
+    <li><span style="color: blue;">&nbsp&nbsp&nbsp[INFOCOM]</span>&nbspLingxiao Yang, Xuewen Dong, Zhiguo Wan, <strong>Sheng Gao</strong>, Wei Tong, Di Lu, Yulong Shen, and Xiaojiang Du. AsyncSC: An Asynchronous Sidechain for Multi-Domain Data Exchange in Internet of Things. Proc. of IEEE Conference on Computer Communications (INFOCOM 2025), London, United Kingdom, 2025: 1-10. <a href="https://ieeexplore.ieee.org/document/11044780">[PDF]</a></li>
 
-        <li><span style="color: blue;">&nbsp&nbsp&nbsp[ICDCS]</span>&nbspLingxiao Yang, Xuewen Dong, <strong>Sheng Gao</strong>, Qiang Qu, Xiaodong Zhang, Wensheng Tian, and Yulong Shen. Optimal Hub Placement and Deadlock-Free Routing for Payment Channel Network Scalability. Proc. of the 43rd IEEE International Conference on Distributed Computing Systems (ICDCS 2023), Hong Kong, China, 2023: 692-702. <a href="https://ieeexplore.ieee.org/abstract/document/10272518">[PDF]</a></li>
+    <li><span style="color: blue;">&nbsp&nbsp&nbsp[ICDCS]</span>&nbspLingxiao Yang, Xuewen Dong, <strong>Sheng Gao</strong>, Qiang Qu, Xiaodong Zhang, Wensheng Tian, and Yulong Shen. Optimal Hub Placement and Deadlock-Free Routing for Payment Channel Network Scalability. Proc. of the 43rd IEEE International Conference on Distributed Computing Systems (ICDCS 2023), Hong Kong, China, 2023: 692-702. <a href="https://ieeexplore.ieee.org/abstract/document/10272518">[PDF]</a></li>
 
-        <li><span style="color: blue;">&nbsp&nbsp&nbsp[APWeb]</span>&nbspCong Sun, <strong>Sheng Gao</strong>, and Jianfeng Ma. Verifying Location-Based Services with Declassification Enforcement. Proc. of 14th Asia-Pacific Web Conference (APWeb 2012), Kunming, China: 695–702. <a href="https://link.springer.com/chapter/10.1007/978-3-642-29253-8_66">[PDF]</a></li>
+    <li><span style="color: blue;">&nbsp&nbsp&nbsp[APWeb]</span>&nbspCong Sun, <strong>Sheng Gao</strong>, and Jianfeng Ma. Verifying Location-Based Services with Declassification Enforcement. Proc. of 14th Asia-Pacific Web Conference (APWeb 2012), Kunming, China: 695–702. <a href="https://link.springer.com/chapter/10.1007/978-3-642-29253-8_66">[PDF]</a></li>
 
-        <li><span style="color: blue;">&nbsp&nbsp&nbsp[DSC]</span>&nbspYonggui Fu, Jianming Zhu, and <strong>Sheng Gao</strong>. CPS Information Security Risk Evaluation System Based on Petri Net. Proc. of International Conference on Computing, Networking and Communication (ICNC 2016), Kauai, Hawaii, USA, 2016: 1-6. <a href="https://ieeexplore.ieee.org/abstract/document/8005529">[PDF]</a></li>
+    <li><span style="color: blue;">&nbsp&nbsp&nbsp[DSC]</span>&nbspYonggui Fu, Jianming Zhu, and <strong>Sheng Gao</strong>. CPS Information Security Risk Evaluation System Based on Petri Net. Proc. of International Conference on Computing, Networking and Communication (ICNC 2016), Kauai, Hawaii, USA, 2016: 1-6. <a href="https://ieeexplore.ieee.org/abstract/document/8005529">[PDF]</a></li>
 
-        <li><span style="color: blue;">&nbsp&nbsp&nbsp[ICNC]</span>&nbspBen Niu, <strong>Sheng Gao</strong>, Fenghua Li, Hui Li, and Zongqing Lu. Protection of Location Privacy in Continuous LBSs Against Adversaries with Background Information. Proc. of IEEE Second International Conference on Data Science in Cyberspace (DSC 2017), Shenzhen, China, 2017: 541-548. <a href="https://ieeexplore.ieee.org/abstract/document/7440649">[PDF]</a></li>
+    <li><span style="color: blue;">&nbsp&nbsp&nbsp[ICNC]</span>&nbspBen Niu, <strong>Sheng Gao</strong>, Fenghua Li, Hui Li, and Zongqing Lu. Protection of Location Privacy in Continuous LBSs Against Adversaries with Background Information. Proc. of IEEE Second International Conference on Data Science in Cyberspace (DSC 2017), Shenzhen, China, 2017: 541-548. <a href="https://ieeexplore.ieee.org/abstract/document/7440649">[PDF]</a></li>
 
-        <li><span style="color: blue;">&nbsp&nbsp&nbsp[INFOCOM WKSHPS]</span>&nbspBowen Xiao, Xiaoyi Fan, <strong>Sheng Gao</strong>, and Wei Cai. EdgeToll: A Blockchain-based Toll Collection System for Public Sharing of Heterogeneous Edges. Proc. of IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS 2019), Paris, France, 2019: 1-6. <a href="https://ieeexplore.ieee.org/abstract/document/9093792">[PDF]</a></li>
+    <li><span style="color: blue;">&nbsp&nbsp&nbsp[INFOCOM WKSHPS]</span>&nbspBowen Xiao, Xiaoyi Fan, <strong>Sheng Gao</strong>, and Wei Cai. EdgeToll: A Blockchain-based Toll Collection System for Public Sharing of Heterogeneous Edges. Proc. of IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS 2019), Paris, France, 2019: 1-6. <a href="https://ieeexplore.ieee.org/abstract/document/9093792">[PDF]</a></li>
         
-        <li><span style="color: blue;">&nbsp&nbsp&nbsp[INFOCOM WKSHPS]</span>&nbspDuo Zhang, Youliang Tian, Linjie Wang, <strong>Sheng Gao</strong>, and Jianfeng Ma. Cooperative Game Model of Delegation Computing: Verifier Separated from Calculators. Proc. of IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS 2020), Toronto, ON, Canada, 2020: 62-67. <a href="https://ieeexplore.ieee.org/abstract/document/9162946">[PDF]</a></li>
+    <li><span style="color: blue;">&nbsp&nbsp&nbsp[INFOCOM WKSHPS]</span>&nbspDuo Zhang, Youliang Tian, Linjie Wang, <strong>Sheng Gao</strong>, and Jianfeng Ma. Cooperative Game Model of Delegation Computing: Verifier Separated from Calculators. Proc. of IEEE Conference on Computer Communications Workshops (INFOCOM WKSHPS 2020), Toronto, ON, Canada, 2020: 62-67. <a href="https://ieeexplore.ieee.org/abstract/document/9162946">[PDF]</a></li>
 
-        <li><span style="color: blue;">&nbsp&nbsp&nbsp[MetaCom]</span>&nbspQinnan Zhang, Zehui Xiong, Jianming Zhu, <strong>Sheng Gao</strong>, Wanting Yang, and Dusit Niyato. Ownership Tokenization and Incentive Design for Learning-based User-Generated Content. Proc. of IEEE International Conference on Metaverse Computing, Networking and Applications (MetaCom 2023), Kyoto, Japan, 2023: 306-313. <a href="https://ieeexplore.ieee.org/abstract/document/10271926">[PDF]</a></li>
+    <li><span style="color: blue;">&nbsp&nbsp&nbsp[MetaCom]</span>&nbspQinnan Zhang, Zehui Xiong, Jianming Zhu, <strong>Sheng Gao</strong>, Wanting Yang, and Dusit Niyato. Ownership Tokenization and Incentive Design for Learning-based User-Generated Content. Proc. of IEEE International Conference on Metaverse Computing, Networking and Applications (MetaCom 2023), Kyoto, Japan, 2023: 306-313. <a href="https://ieeexplore.ieee.org/abstract/document/10271926">[PDF]</a></li>
 
-        <li><span style="color: blue;">&nbsp&nbsp&nbsp[MSN]</span>&nbspXindi Ma, Jianfeng Ma, <strong>Sheng Gao</strong>, and Qingsong Yao. APDL: A Practical Privacy-Preserving Deep Learning Model for Smart Devices. Proc. of International Conference on Mobile Ad-Hoc and Sensor Networks (MSN 2017), Beijing, China, 2017: 377–390. <a href="https://link.springer.com/chapter/10.1007/978-981-10-8890-2_28">[PDF]</a></li>
+    <li><span style="color: blue;">&nbsp&nbsp&nbsp[MSN]</span>&nbspXindi Ma, Jianfeng Ma, <strong>Sheng Gao</strong>, and Qingsong Yao. APDL: A Practical Privacy-Preserving Deep Learning Model for Smart Devices. Proc. of International Conference on Mobile Ad-Hoc and Sensor Networks (MSN 2017), Beijing, China, 2017: 377–390. <a href="https://link.springer.com/chapter/10.1007/978-981-10-8890-2_28">[PDF]</a></li>
 
-        <li><span style="color: blue;">&nbsp&nbsp&nbsp[SPDE]</span>&nbspDuo Zhang, Xiaodong Zhang, <strong>Sheng Gao</strong>, and Youliang Tian. Bitcoin-Based Anti-collusion Fair Payments for Outsourcing Computations in Cloud Computing. Proc. of International Conference on Security and Privacy in Digital Economy (SPDE 2020), Quzhou, China, 2020: 309–321. <a href="https://link.springer.com/chapter/10.1007/978-981-15-9129-7_22">[PDF]</a></li>
+    <li><span style="color: blue;">&nbsp&nbsp&nbsp[SPDE]</span>&nbspDuo Zhang, Xiaodong Zhang, <strong>Sheng Gao</strong>, and Youliang Tian. Bitcoin-Based Anti-collusion Fair Payments for Outsourcing Computations in Cloud Computing. Proc. of International Conference on Security and Privacy in Digital Economy (SPDE 2020), Quzhou, China, 2020: 309–321. <a href="https://link.springer.com/chapter/10.1007/978-981-15-9129-7_22">[PDF]</a></li>
 
-        <li><span style="color: blue;">&nbsp&nbsp&nbsp[ICCVE]</span>&nbspXinghua Li, Lingjuan Deng, <strong>Sheng Gao</strong>, Jianfeng Ma, and Qingsong Yao. A Demand-Aware Location Privacy Protection Scheme in Continuous Location-based Services. Proc. of International Conference on Connected Vehicles and Expo (ICCVE 2014), Vienna, Austria, 2014: 112-117. <a href="https://ieeexplore.ieee.org/abstract/document/7297523">[PDF]</a></li>
+    <li><span style="color: blue;">&nbsp&nbsp&nbsp[ICCVE]</span>&nbspXinghua Li, Lingjuan Deng, <strong>Sheng Gao</strong>, Jianfeng Ma, and Qingsong Yao. A Demand-Aware Location Privacy Protection Scheme in Continuous Location-based Services. Proc. of International Conference on Connected Vehicles and Expo (ICCVE 2014), Vienna, Austria, 2014: 112-117. <a href="https://ieeexplore.ieee.org/abstract/document/7297523">[PDF]</a></li>
 
-        <li><span style="color: blue;">&nbsp&nbsp&nbsp[NaNA]</span>&nbspXindi Ma, Junying Zhang, Jianfeng Ma, Qi Jiang, <strong>Sheng Gao</strong>, and Kang Xie. Do Not Perturb Me: A Secure Byzantine-Robust Mechanism for Machine Learning in IoT. Proc. of International Conference on Networking and Network Applications (NaNA 2020), Haikou City, China, 2020: 348-354. <a href="https://ieeexplore.ieee.org/abstract/document/9353803">[PDF]</a></li>
+    <li><span style="color: blue;">&nbsp&nbsp&nbsp[NaNA]</span>&nbspXindi Ma, Junying Zhang, Jianfeng Ma, Qi Jiang, <strong>Sheng Gao</strong>, and Kang Xie. Do Not Perturb Me: A Secure Byzantine-Robust Mechanism for Machine Learning in IoT. Proc. of International Conference on Networking and Network Applications (NaNA 2020), Haikou City, China, 2020: 348-354. <a href="https://ieeexplore.ieee.org/abstract/document/9353803">[PDF]</a></li>
 
-        <li><span style="color: blue;">&nbsp&nbsp&nbsp[NaNA]</span>&nbspKang Xiang, Youliang Tian, <strong>Sheng Gao</strong>, Changgen Peng, Weijie Tan. Rational Delegation Learning Outsourcing Scheme Based on Game Theory. Proc. of International Conference on Networking and Network Applications (NaNA 2020), Haikou City, China, 2020: 130-135. <a href="https://ieeexplore.ieee.org/abstract/document/9353803">[PDF]</a></li>
+    <li><span style="color: blue;">&nbsp&nbsp&nbsp[NaNA]</span>&nbspKang Xiang, Youliang Tian, <strong>Sheng Gao</strong>, Changgen Peng, Weijie Tan. Rational Delegation Learning Outsourcing Scheme Based on Game Theory. Proc. of International Conference on Networking and Network Applications (NaNA 2020), Haikou City, China, 2020: 130-135. <a href="https://ieeexplore.ieee.org/abstract/document/9353803">[PDF]</a></li>
 
-        <li><span style="color: blue;">&nbsp&nbsp&nbsp[NaNA]</span>&nbspXindi Ma, Cunzhu Su, Jianfeng Ma, Qi Jiang, Ning Xi, and <strong>Sheng Gao</strong>. Self-Anomaly-Detection Model Training via Initialized Meta Model. Proc. of International Conference on Networking and Network Applications (NaNA 2022), Urumqi, China, 2022: 471-476. <a href="https://ieeexplore.ieee.org/abstract/document/9353803">[PDF]</a></li>
+    <li><span style="color: blue;">&nbsp&nbsp&nbsp[NaNA]</span>&nbspXindi Ma, Cunzhu Su, Jianfeng Ma, Qi Jiang, Ning Xi, and <strong>Sheng Gao</strong>. Self-Anomaly-Detection Model Training via Initialized Meta Model. Proc. of International Conference on Networking and Network Applications (NaNA 2022), Urumqi, China, 2022: 471-476. <a href="https://ieeexplore.ieee.org/abstract/document/9353803">[PDF]</a></li>
+    </ul>
+    <hr>
+    <h5 class="mt-4 fs-4 text-justify" id="Publications">Granted Invention Patent</h5>
+      <ul class="patent">
+        <li><span style="color: blue;"></span>&nbsp<strong>高胜</strong>, 朴桂荣, 朱建明. 基于区块链智能合约的公平数据交易方法及装置. ZL202110044196.4 [P]. 中国, 2023年10月20日.</li>
+        
+        <li><span style="color: blue;"></span>&nbsp<strong>高胜</strong>, 朴桂荣, 朱建明. 基于聚合签名和隔离见证的区块链数据存储方法及装置. ZL202110643317.7 [P]. 中国, 2023年6月23日.</li>
+        
+        <li><span style="color: blue;"></span>&nbsp<strong>高胜</strong>, 胡乘源, 朱建明. 抗投毒攻击的聚合防御方法、聚合装置及电子设备. ZL202211397225.6 [P]. 中国, 2023年10月24日.</li>
+        
+        <li><span style="color: blue;"></span>&nbsp<strong>高胜</strong>, 刘文婷, 朱建明. 基于 EPC 模型的智能法律合约生成方法及装置. ZL202311405540.3 [P]. 中国, 2024年3月15日.</li>
+
+        <li><span style="color: blue;"></span>&nbsp<strong>高胜</strong>, 刘文婷, 朱建明, 钟丹凤, 隋智源. 智能法律合约生成方法、装置、电子设备及存储介质. ZL202311405545.6 [P]. 中国, 2024年4月9日.</li>
+
+        <li><span style="color: blue;"></span>&nbsp<strong>高胜</strong>, 陈琳琳, 朱建明. 自然语言合约向智能法律合约转换方法、装置及设备. ZL202510087627.3 [P]. 中国, 2025年07月04日.</li>
+        
+        <li><span style="color: blue;"></span>&nbsp<strong>高胜</strong>, 陈琳琳, 朱建明. 基于大模型微调的智能合约建模方法、装置及电子设备. ZL202510087626.9 [P]. 中国, 2025年07月01日.</li>
+
+        <li><span style="color: blue;"></span>&nbsp朱建明, 张沁楠, <strong>高胜</strong>, 章宁. 分布式账本数据存储优化方法、装置、电子设备及介质. ZL202110098692.8 [P]. 中国, 2023年12月19日.</li>
+
+        <li><span style="color: blue;"></span>&nbsp朱建明, 袁崇轩, <strong>高胜</strong>, 章宁. 基于区块链的交易主客体的验证方法. ZL201910641836.2 [P]. 中国, 2023年05月26日.</li>
+      
+        <li><span style="color: blue;"></span>&nbsp张沁楠, 朱建明, <strong>高胜</strong>, 章宁. 一种基于MPT验证的分布式账本模型冷数据归档及迁移存储方法. ZL202110145771.X [P]. 中国, 2021年02月02日.</li>
+
+        <li><span style="color: blue;"></span>&nbsp朱建明, 张沁楠, <strong>高胜</strong>, 章宁. 一种面向群智服务的区块链节点贡献度证明共识方法. ZL202110547351.4 [P]. 中国, 2023年09月29日.</li>
+
+        <li><span style="color: blue;"></span>&nbsp隋智源, 朱建明, <strong>高胜</strong>. 一种基于批签密的智能电网系统及其构建方法. ZL201910651255.7 [P]. 中国, 2021年01月29日.</li>
+      </ul>
     </div> 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
